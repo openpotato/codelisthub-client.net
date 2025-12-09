@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="src/CodeListHub.Client.csproj" />
+  <Project Path="test/Xunit/CodeListHub.Client.XUnit.csproj" />
+</Solution>
