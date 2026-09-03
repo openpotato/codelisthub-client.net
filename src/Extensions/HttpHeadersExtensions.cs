@@ -4,34 +4,33 @@
  *    
  *    Copyright (c) STÜBER SYSTEMS GmbH
  *
- *    Licensed under the MIT License, Version 2.0. 
+ *    Licensed under the MIT License. 
  */
 #endregion
 
 using System.Linq;
 using System.Net.Http.Headers;
 
-namespace System
+namespace System;
+
+/// <summary>
+/// Extensions for <see cref="HttpHeaders"/>
+/// </summary>
+public static class HttpHeadersExtensions
 {
     /// <summary>
-    /// Extensions for <see cref="HttpHeaders"/>
+    /// Returns the first header value for a specified header as <see cref="int"/>
     /// </summary>
-    public static class HttpHeadersExtensions
+    /// <param name="httpHeaders">A <see cref="HttpHeaders"/> instance</param>
+    /// <param name="name">ame of the header</param>
+    /// <returns>A <see cref="int"/> value</returns>
+    public static int GetFirstIntegerOrDefault(this HttpHeaders httpHeaders, string name)
     {
-        /// <summary>
-        /// Returns the first header value for a specified header as <see cref="int"/>
-        /// </summary>
-        /// <param name="httpHeaders">A <see cref="HttpHeaders"/> instance</param>
-        /// <param name="name">ame of the header</param>
-        /// <returns>A <see cref="int"/> value</returns>
-        public static int GetFirstIntegerOrDefault(this HttpHeaders httpHeaders, string name)
+        var value = httpHeaders.GetValues(name).FirstOrDefault();
+        if (value != null)
         {
-            var value = httpHeaders.GetValues(name).FirstOrDefault();
-            if (value != null)
-            {
-                return int.Parse(value);
-            }
-            return default;
+            return int.Parse(value);
         }
-   }
+        return default;
+    }
 }

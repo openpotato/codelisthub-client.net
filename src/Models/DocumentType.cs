@@ -21,27 +21,26 @@
 
 using System.Text.Json.Serialization;
 
-namespace CodeListHub.Client
+namespace CodeListHub.Client;
+
+/// <summary>
+/// Document types
+/// </summary>
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum DocumentType
 {
     /// <summary>
-    /// Document types
+    /// All doceemnts
     /// </summary>
-    [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum DocumentType
-    {
-        /// <summary>
-        /// All doceemnts
-        /// </summary>
-        All,
+    All,
 
-        /// <summary>
-        /// A code list document
-        /// </summary>
-        CodeList,
+    /// <summary>
+    /// A code list document
+    /// </summary>
+    CodeList,
 
-        /// <summary>
-        /// A code list set document
-        /// </summary>
-        CodeListSet
-    }
+    /// <summary>
+    /// A code list set document
+    /// </summary>
+    CodeListSet
 }

@@ -4,27 +4,26 @@
  *    
  *    Copyright (c) STÜBER SYSTEMS GmbH
  *
- *    Licensed under the MIT License, Version 2.0. 
+ *    Licensed under the MIT License. 
  */
 #endregion
 
 using System.Reflection;
 
-namespace CodeListHub.Client
-{
-    /// <summary>
-    /// Helper class to extract assembly infos
-    /// </summary>
-    public static class AssemblyInfo
-    {
-        public static string GetAgentName()
-        {
-            return Assembly.GetExecutingAssembly().GetName().Name;
-        }
+namespace CodeListHub.Client;
 
-        public static string GetVersion()
-        {
-            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        }
+/// <summary>
+/// Helper class to extract assembly infos
+/// </summary>
+public static class AssemblyInfo
+{
+    public static string GetAgentName()
+    {
+        return Assembly.GetExecutingAssembly()?.GetName()?.Name;
+    }
+
+    public static string GetVersion()
+    {
+        return Assembly.GetExecutingAssembly()?.GetName()?.Version?.ToString();
     }
 }

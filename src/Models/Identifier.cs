@@ -19,21 +19,20 @@
  */
 #endregion
 
-namespace CodeListHub.Client
+namespace CodeListHub.Client;
+
+/// <summary>
+/// A general identifier.
+/// </summary>
+public class Identifier
 {
     /// <summary>
-    /// A general identifier.
+    /// The source of the identifier.
     /// </summary>
-    public class Identifier
-    {
-        /// <summary>
-        /// The source of the identifier.
-        /// </summary>
-        public IdentifierSource Source { get; set; }
+    public IdentifierSource Source { get; set; }
 
-        /// <summary>
-        /// The identifier value.
-        /// </summary>
-        public string Value { get; set; }
-    }
+    /// <summary>
+    /// The identifier value.
+    /// </summary>
+    public string Value { get; set; }
 }

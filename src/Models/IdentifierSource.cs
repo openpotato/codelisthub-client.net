@@ -21,26 +21,25 @@
 
 using System;
 
-namespace CodeListHub.Client
+namespace CodeListHub.Client;
+
+/// <summary>
+/// The source of a general identifier
+/// </summary>
+public class IdentifierSource
 {
     /// <summary>
-    /// The source of a general identifier
+    /// Human-readable name of the source.
     /// </summary>
-    public class IdentifierSource
-    {
-        /// <summary>
-        /// Human-readable name of the source.
-        /// </summary>
-        public string LongName { get; set; }
+    public string LongName { get; set; }
 
-        /// <summary>
-        /// Short name of the source.
-        /// </summary>
-        public string ShortName { get; set; }
+    /// <summary>
+    /// Short name of the source.
+    /// </summary>
+    public string ShortName { get; set; }
 
-        /// <summary>
-        /// Url with further information.
-        /// </summary>
-        public Uri Url { get; set; }
-    }
+    /// <summary>
+    /// Url with further information.
+    /// </summary>
+    public Uri Url { get; set; }
 }

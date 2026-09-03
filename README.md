@@ -1,13 +1,13 @@
-[![NuGet Gallery](https://img.shields.io/badge/NuGet%20Gallery-codelisthub-client.net-blue.svg)](https://www.nuget.org/packages/CodeListHub-Client.Net/)
+[![NuGet CodeListHub.Client](https://img.shields.io/nuget/v/CodeListHub.Client?label=CodeListHub.Client)](https://www.nuget.org/packages/CodeListHub.Client/)
 ![GitHub](https://img.shields.io/github/license/openpotato/codelisthub-client.net)
 
 # CodeListHub .NET Client
 
-The official [.NET](https://www.embarcadero.com/products/delphi) client library for direct access to the [CodeListHub project](https://www.codelisthub.org/en).
+The official [.NET](https://dotnet.microsoft.com/) client library for direct access to the [CodeListHub project](https://www.codelisthub.org/en).
 
-+ Supports .NET 10, .NET 9 and .NET 8
-+ Supports all available [API endpoints](https://api.codelisthub.org/swagger/index.html)
-+ Supports paged responses and [RFC 9457](https://datatracker.ietf.org/doc/html/rfc9457) error responses
++ Supports `.NET 10`.
++ Supports all available [API endpoints](https://api.codelisthub.org/swagger/index.html).
++ Supports paged responses and [RFC 9457](https://datatracker.ietf.org/doc/html/rfc9457) error responses.
 
 ## Installation
 

@@ -21,70 +21,69 @@
 
 using System;
 
-namespace CodeListHub.Client
+namespace CodeListHub.Client;
+
+/// <summary>
+/// Representation of an entry in the document index
+/// </summary>
+public class DocumentInfo
 {
     /// <summary>
-    /// Representation of an entry in the document index
+    /// Canonical URI which uniquely identifies all versions this document (collectively)
     /// </summary>
-    public class DocumentInfo
-    {
-        /// <summary>
-        /// Canonical URI which uniquely identifies all versions this document (collectively)
-        /// </summary>
-        public Uri CanonicalUri { get; set; }
+    public Uri CanonicalUri { get; set; }
 
-        /// <summary>
-        /// Canonical URI which uniquely identifies this document
-        /// </summary>
-        public Uri CanonicalVersionUri { get; set; }
+    /// <summary>
+    /// Canonical URI which uniquely identifies this document
+    /// </summary>
+    public Uri CanonicalVersionUri { get; set; }
 
-        /// <summary>
-        /// The language of the document
-        /// </summary>
-        public string Language { get; set; }
+    /// <summary>
+    /// The language of the document
+    /// </summary>
+    public string Language { get; set; }
 
-        /// <summary>
-        /// Human-readable name of this document
-        /// </summary>
-        public string LongName { get; set; }
+    /// <summary>
+    /// Human-readable name of this document
+    /// </summary>
+    public string LongName { get; set; }
 
-        /// <summary>
-        /// The timepoint of the publication of the document.
-        /// </summary>
-        public DateTimeOffset? PublishedAt { get; set; }
+    /// <summary>
+    /// The timepoint of the publication of the document.
+    /// </summary>
+    public DateTimeOffset? PublishedAt { get; set; }
 
-        /// <summary>
-        /// The publisher that is responsible for publication and/or maintenance of the codes
-        /// </summary>
-        public Publisher Publisher { get; set; }
+    /// <summary>
+    /// The publisher that is responsible for publication and/or maintenance of the codes
+    /// </summary>
+    public Publisher Publisher { get; set; }
 
-        /// <summary>
-        /// A short identifier of this document
-        /// </summary>
-        public string ShortName { get; set; }
+    /// <summary>
+    /// A short identifier of this document
+    /// </summary>
+    public string ShortName { get; set; }
 
-        /// <summary>
-        /// A list of tags for this document
-        /// </summary>
-        public string[] Tags { get; set; }
+    /// <summary>
+    /// A list of tags for this document
+    /// </summary>
+    public string[] Tags { get; set; }
 
-        /// <summary>
-        /// The document type
-        /// </summary>
-        public DocumentType Type { get; set; }
+    /// <summary>
+    /// The document type
+    /// </summary>
+    public DocumentType Type { get; set; }
 
-        /// <summary>
-        /// The timepoint from which this document is valid.
-        /// </summary>
-        public DateTimeOffset? ValidFrom { get; set; }
+    /// <summary>
+    /// The timepoint from which this document is valid.
+    /// </summary>
+    public DateTimeOffset? ValidFrom { get; set; }
 
-        /// <summary>
-        /// The timepoint until which this document is valid.
-        public DateTimeOffset? ValidTo { get; set; }
+    /// <summary>
+    /// The timepoint until which this document is valid.
+    public DateTimeOffset? ValidTo { get; set; }
 
-        /// <summary>
-        /// The version of the document
-        /// </summary>
-        public string Version { get; set; }
-    }
+    /// <summary>
+    /// The version of the document
+    /// </summary>
+    public string Version { get; set; }
 }

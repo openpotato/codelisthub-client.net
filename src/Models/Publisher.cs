@@ -21,31 +21,30 @@
 
 using System;
 
-namespace CodeListHub.Client
+namespace CodeListHub.Client;
+
+/// <summary>
+/// The publisher responsible for publishing and/or maintaining the codes
+/// </summary>
+public class Publisher
 {
     /// <summary>
-    /// The publisher responsible for publishing and/or maintaining the codes
+    /// Identifier of the publisher
     /// </summary>
-    public class Publisher
-    {
-        /// <summary>
-        /// Identifier of the publisher
-        /// </summary>
-        public Identifier Identifier { get; set; }
+    public Identifier Identifier { get; set; }
 
-        /// <summary>
-        /// Human-readable name for the publisher
-        /// </summary>
-        public string LongName { get; set; }
+    /// <summary>
+    /// Human-readable name for the publisher
+    /// </summary>
+    public string LongName { get; set; }
 
-        /// <summary>
-        /// Short name of the publisher
-        /// </summary>
-        public string ShortName { get; set; }
+    /// <summary>
+    /// Short name of the publisher
+    /// </summary>
+    public string ShortName { get; set; }
 
-        /// <summary>
-        /// Url with further information.
-        /// </summary>
-        public Uri Url { get; set; }
-    }
+    /// <summary>
+    /// Url with further information.
+    /// </summary>
+    public Uri Url { get; set; }
 }
